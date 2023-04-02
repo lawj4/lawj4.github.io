@@ -1,13 +1,21 @@
 import React from 'react';
 import Home from './Home';
 import Overlay from './Overlay';
-
+import Project from './Project';
 
 export default function App() {
     return (
         <div>
             <Overlay/>
-            <Home />
+            <div className="slides flex-col">
+                
+                <Home />
+                <Project text="project1"/>
+                <Project text="project2"/>
+                <Project text="project3"/>
+
+            </div>
         </div>
+        
     )
 }

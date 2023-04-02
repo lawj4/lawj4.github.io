@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+
+
 export default function Home() {
   const [mouseX, setMouseX] = useState(-1);
   const [mouseY, setMouseY] = useState(-1);
@@ -15,7 +17,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="absolute">
+    <div className="slide">
       <video
         autoPlay={true}
         muted
