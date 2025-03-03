@@ -16,21 +16,21 @@ const Home = () => {
       <div className="block">
       <img
         className="banner"
-        src="public/images/metal11.jpeg"  
+        src="/images/metal11.jpeg"  
         alt="rainbow"
       />
       </div>
       <div className="block">
       <img
         className="banner"
-        src="public/images/metal12.jpeg"   
+        src="/images/metal12.jpeg"   
         alt="rainbow"
       />
       </div>
       <div className="block">
       <img
         className="banner"
-        src="public/images/metal13.jpeg"  
+        src="/images/metal13.jpeg"  
         alt="rainbow"
       />
       </div>

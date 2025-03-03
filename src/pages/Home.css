@@ -1,42 +1,46 @@
-/* Home.css */
 @font-face {
     font-family: 'SF Display';
-    src: url('/public/fonts/SFPRODISPLAYSEMIBOLD.OTF');
+    src: url('/fonts/SF-Pro-Display-Semibold.otf') format('opentype');
     font-weight: 600; /* Semi-bold */
     font-style: normal;
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: 'SF Display';
-    src: url('/public/fonts/SFPRODISPLAYBOLD.OTF');
+    src: url('/fonts/SF-Pro-Display-Bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: 'SF Display';
-    src: url('/public/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF');
+    src: url('/fonts/SF-Pro-Display-SemiboldItalic.otf') format('opentype');
     font-weight: 600; /* Semi-bold */
     font-style: italic;
-  }
-  @font-face {
+}
+
+@font-face {
     font-family: 'SF Display';
-    src: url('/public/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype'); /* Assuming you have a regular OTF file */
+    src: url('/fonts/SF-Pro-Display-Regular.otf') format('opentype');
     font-weight: normal; /* Regular */
     font-style: normal;
 }
+
 @font-face {
     font-family: 'SF Display';
-    src: url('/public/fonts/SFPRODISPLAYTHIN.OTF') format('opentype'); /* Assuming you have a regular OTF file */
-    font-weight: 100; /* Regular */
+    src: url('/fonts/SF-Pro-Display-Thin.otf') format('opentype');
+    font-weight: 100; /* Thin */
     font-style: normal;
 }
+
 @font-face {
     font-family: 'SF Display';
-    src: url('/public/fonts/SFPRODISPLAYLight.OTF') format('opentype'); /* Assuming you have a regular OTF file */
-    font-weight: 200; /* Regular */
+    src: url('/fonts/SF-Pro-Display-Light.otf') format('opentype');
+    font-weight: 200; /* Light */
     font-style: normal;
 }
+
+  
   
 
   
@@ -120,7 +124,7 @@
     width: 100%;
     height: 750px; /* Fixed height */
     background-color: black; /* Fallback color */
-    background-image: url('/images/color4encrop.jpeg'); /* Ensure correct path */
+    background-image: url('/images/color4final.jpeg'); /* Ensure correct path */
     background-size: auto 100%; /* Maintain image height, expand width */
     background-position: center; /* Keep it centered */
     background-repeat: no-repeat; /* Prevent tiling */
