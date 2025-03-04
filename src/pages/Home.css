@@ -14,17 +14,11 @@
 
 @font-face {
     font-family: 'SF Display';
-    src: url('/fonts/SF-Pro-Display-SemiboldItalic.otf') format('opentype');
-    font-weight: 600; /* Semi-bold */
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'SF Display';
     src: url('/fonts/SF-Pro-Display-Regular.otf') format('opentype');
     font-weight: normal; /* Regular */
     font-style: normal;
 }
+
 
 @font-face {
     font-family: 'SF Display';
@@ -50,7 +44,6 @@
     font-style: normal;
     font-size: 56px; /* Font size for the name */
     margin-bottom: 0px; /* Bottom margin for spacing */
-
     line-height: 60px; /* Adjust line height, instead of using height */
     color: #1D1D1E; /* Dark text color */
     z-index: 10;
@@ -60,50 +53,77 @@
     font-family: 'SF Display', Arial, sans-serif; /* SF Display with fallback */
     font-weight: normal;
     font-style: normal;
-    font-size: 28px;
+    letter-spacing: 0.2px;
+    font-size: 30px;
     line-height: 32px; /* Corrected property */
     color: #1D1D1E;
     z-index: 10;
 }
-.headline.home {
-    margin-top: 100px;
-}
 
-.subhead.detail {
-    margin-top: 10px;
-    font-size: 28px;
-    line-height: 32px; /* Corrected property */
-    margin-bottom: 20px;
-}
 
-.subhead.rainbow {
-    background-image: linear-gradient(to right, red, orange, green, purple); /* Gradient from red to green to purple */
-    -webkit-background-clip: text; /* Apply the gradient to the text */
-    background-clip: text; /* Apply the gradient to the text */
-    color: transparent; /* Make the text color transparent to show the gradient */
-    font-size: 21px;
-    line-height: 25px; /* Corrected property */
-    margin-top: 400px;
+.button-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 20px; /* Space between buttons */
+    width: 100%; /* Ensure container takes up the full width */
+    margin-top: 20px; /* Optional margin for spacing */
+  }
+  
+
+  .blue-btn-home {
+    background-color: #007BFF;
+    color: #EBF3FD;
+    font-family: 'SF Display', Arial, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    border: none;
+    letter-spacing: 0.7px;
+    border-radius: 25px;
+    letter-spacing: 0.7px;
+    padding: 12px 22px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .blue-btn-home:hover {
+    background-color: #2077d4;
+  }
+  
+
+
+  .white-btn-home {
+    background-color: transparent;
+    color: #007BFF;
+    font-family: 'SF Display', Arial, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    border-width: 1px;
+    border-color: #007BFF;
+    letter-spacing: 0.7px;
+    border-radius: 25px;
+    padding: 12px 22px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .white-btn-home:hover {
+    color: #EBF3FD; 
+    background-color: #007BFF;
   }
 
   
-  .learn-more-btn {
-    background-color: #007BFF; /* Blue color for the button */
-    color: white;
-    font-family: 'SF Display', Arial, sans-serif; /* SF Display with fallback */
-    font-weight: normal;
-    font-style: normal;
-    border: none;
-    border-radius: 25px; /* Rounded button */
-    padding: 10px 25px; /* Adjust padding for size */
-    font-size: 17px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 10;
-  }
+  
+
+
+
+
+
+
+
   .block {
-    margin: 5px;
+    margin: 12px;
     height: 700px;
     width:100%;
     background-color: black;
@@ -120,6 +140,7 @@
     min-height: 100vh;
   }
   
+/*FIRST BLOCK*/
   .first-block {
     width: 100%;
     height: 750px; /* Fixed height */
@@ -129,7 +150,50 @@
     background-position: center; /* Keep it centered */
     background-repeat: no-repeat; /* Prevent tiling */
 }
-  
+.first-block:hover {
+    background-color: red;
+}
+.headline.first {
+    margin-top: 100px;
+}
+.subhead.first {
+    margin-top: 5px;
+    font-size: 28px;
+    line-height: 32px; /* Corrected property */
+    margin-bottom: 20px;
+}
+.subhead.rainbow {
+    background-image: linear-gradient(to right, red, orange, green, purple); /* Gradient from red to green to purple */
+    -webkit-background-clip: text; /* Apply the gradient to the text */
+    background-clip: text; /* Apply the gradient to the text */
+    color: transparent; /* Make the text color transparent to show the gradient */
+    font-size: 21px;
+    line-height: 25px; /* Corrected property */
+    margin-top: 395px;
+  }
+
+/*SECOND BLOCK*/
+.second-block {
+    background-color: black;
+    height: 700px;
+    width: 100%;
+    background-image: url('/images/orange-metal-radial-final.jpg'); /* Ensure correct path */
+    background-size: auto 100%; /* Maintain image height, expand width */
+    background-position: center; /* Keep it centered */
+    background-repeat: no-repeat; /* Prevent tiling */
+}
+.headline.second {
+    margin-top: 55px;
+    color: white;
+}
+.subhead.second {
+    color: white;
+    margin-top: 5px;
+    font-size: 28px;
+    line-height: 32px; /* Corrected property */
+    margin-bottom: 20px;
+}  
+
   .block.spacer {
     margin-top: 550px;
     z-index: 5;
@@ -144,11 +208,3 @@
 }
 
 
-  .learn-more-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-  }
-  
-  .learn-more-btn:focus {
-    outline: none; /* Remove focus outline */
-  }
-  

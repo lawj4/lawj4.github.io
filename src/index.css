@@ -55,3 +55,28 @@ html, body {
 .read-the-docs {
   color: #888;
 }
+
+
+.learn-more-btn {
+  background-color: #007BFF; /* Blue color for the button */
+  color: #EBF3FD;
+  font-family: 'SF Display', Arial, sans-serif; /* SF Display with fallback */
+  font-weight: 200;
+  font-style: normal;
+  border: none;
+  letter-spacing: 0.7px;
+  border-radius: 25px; /* Rounded button */
+  padding: 10px 25px; /* Adjust padding for size */
+  font-size: 17px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+.learn-more-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.learn-more-btn:focus {
+  outline: none; /* Remove focus outline */
+}

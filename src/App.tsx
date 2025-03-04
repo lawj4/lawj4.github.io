@@ -1,12 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import MenuBar from './MenuBar';
 import './App.css';
 
-// Page components (you can create these files or write simple placeholders)
+// Page components
 import Home from './pages/Home';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
+import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 
 function App() {
@@ -20,14 +21,14 @@ function App() {
 
   return (
     <Router>
-      <div className = "app-container">
+      <div className="app-container">
         <MenuBar items={menuItems} />
-        
-        {/* Define the routes here */}
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

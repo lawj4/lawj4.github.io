@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Resume.css'; // Import the corresponding CSS file
 const Portfolio = () => {
   return (
     <div>
