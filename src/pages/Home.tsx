@@ -7,8 +7,8 @@ const Home = () => {
       
       
       <div className="first-block">
-  <h1 className="headline first">iPhone 16e</h1>
-  <h2 className="subhead first">Latest iPhone. Greatest price.</h2>
+  <h1 className="headline first">Jefferson Law</h1>
+  <h2 className="subhead first">Computer Science Undergraduate at UCI</h2>
 
   <div className="button-container">
     <button className="blue-btn-home">Learn more</button>
