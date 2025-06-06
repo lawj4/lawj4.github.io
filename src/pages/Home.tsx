@@ -6,67 +6,140 @@ const Home = () => {
     <div className="home-container">
       
       <div className="hero-section">
-        <div className="hero-content">
-          <h1 className="hero-title">Jefferson Law</h1>
-          <h2 className="hero-subtitle">Computer Science Undergraduate at UCI</h2>
-          
-          <div className="button-container">
-            <button className="cta-button primary">Learn More</button>
-            <button className="cta-button secondary">Get In Touch</button>
-          </div>
-          
-          <p className="hero-tagline">Building tomorrow's technology today</p>
+        <div className="geometric-grid">
+          <div className="grid-line horizontal"></div>
+          <div className="grid-line horizontal" style={{top: '25%'}}></div>
+          <div className="grid-line horizontal" style={{top: '50%'}}></div>
+          <div className="grid-line horizontal" style={{top: '75%'}}></div>
+          <div className="grid-line vertical"></div>
+          <div className="grid-line vertical" style={{left: '25%'}}></div>
+          <div className="grid-line vertical" style={{left: '50%'}}></div>
+          <div className="grid-line vertical" style={{left: '75%'}}></div>
         </div>
         
-        <div className="floating-elements">
-          <div className="circle circle-1"></div>
-          <div className="circle circle-2"></div>
-          <div className="circle circle-3"></div>
-        </div>
-      </div>
-
-      <div className="feature-section">
-        <div className="feature-content">
-          <h2 className="section-title">Innovation Meets Excellence</h2>
-          <p className="section-description">
-            Crafting digital experiences with precision, creativity, and cutting-edge technology
-          </p>
+        <div className="hero-content">
+          <div className="rank-insignia">
+            <div className="chevron"></div>
+            <div className="chevron"></div>
+            <div className="chevron"></div>
+          </div>
           
-          <div className="feature-grid">
-            <div className="feature-card">
-              <div className="feature-icon">⚡</div>
-              <h3>Performance</h3>
-              <p>Lightning-fast solutions built for scale</p>
+          <h1 className="name-title">JEFFERSON LAW</h1>
+          <div className="title-divider"></div>
+          <h2 className="position-title">COMPUTER SCIENCE UNDERGRADUATE</h2>
+          <h3 className="institution">UNIVERSITY OF CALIFORNIA, IRVINE</h3>
+          
+          <div className="action-buttons">
+            <a href="#/portfolio" className="military-btn primary">
+              <span className="btn-text">VIEW PORTFOLIO</span>
+              <div className="btn-arrow">→</div>
+            </a>
+            <a href="#/resume" className="military-btn secondary">
+              <span className="btn-text">ACCESS RESUME</span>
+              <div className="btn-arrow">→</div>
+            </a>
+          </div>
+        </div>
+        
+        <div className="hexagon-pattern">
+          <div className="hexagon hex-1"></div>
+          <div className="hexagon hex-2"></div>
+          <div className="hexagon hex-3"></div>
+          <div className="hexagon hex-4"></div>
+          <div className="hexagon hex-5"></div>
+        </div>
+      </div>
+
+      <div className="mission-section">
+        <div className="section-header">
+          <div className="section-number">01</div>
+          <h2 className="section-title">MISSION STATEMENT</h2>
+          <div className="section-line"></div>
+        </div>
+        
+        <div className="mission-content">
+          <div className="mission-text">
+            <p>Developing innovative software solutions with precision, discipline, and unwavering commitment to excellence. Every line of code serves a strategic purpose in advancing technological capabilities.</p>
+          </div>
+          
+          <div className="capabilities-grid">
+            <div className="capability-item">
+              <div className="capability-icon">▲</div>
+              <h4>FRONTEND DEVELOPMENT</h4>
+              <div className="capability-bar">
+                <div className="capability-fill" style={{width: '90%'}}></div>
+              </div>
             </div>
             
-            <div className="feature-card">
-              <div className="feature-icon">🎯</div>
-              <h3>Precision</h3>
-              <p>Pixel-perfect designs with attention to detail</p>
+            <div className="capability-item">
+              <div className="capability-icon">■</div>
+              <h4>BACKEND SYSTEMS</h4>
+              <div className="capability-bar">
+                <div className="capability-fill" style={{width: '85%'}}></div>
+              </div>
             </div>
             
-            <div className="feature-card">
-              <div className="feature-icon">🚀</div>
-              <h3>Innovation</h3>
-              <p>Pushing boundaries with modern technologies</p>
+            <div className="capability-item">
+              <div className="capability-icon">◆</div>
+              <h4>DATABASE DESIGN</h4>
+              <div className="capability-bar">
+                <div className="capability-fill" style={{width: '80%'}}></div>
+              </div>
+            </div>
+            
+            <div className="capability-item">
+              <div className="capability-icon">●</div>
+              <h4>SYSTEM ARCHITECTURE</h4>
+              <div className="capability-bar">
+                <div className="capability-fill" style={{width: '75%'}}></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="stats-section">
-        <div className="stats-grid">
-          <div className="stat-item">
-            <div className="stat-number">100+</div>
-            <div className="stat-label">Projects Completed</div>
+      <div className="tactical-section">
+        <div className="section-header">
+          <div className="section-number">02</div>
+          <h2 className="section-title">OPERATIONAL OVERVIEW</h2>
+          <div className="section-line"></div>
+        </div>
+        
+        <div className="tactical-grid">
+          <div className="tactical-card">
+            <div className="card-header">
+              <div className="status-indicator active"></div>
+              <span className="card-designation">ALPHA</span>
+            </div>
+            <h3>ACTIVE PROJECTS</h3>
+            <div className="metric-display">
+              <span className="metric-number">12</span>
+              <span className="metric-unit">DEPLOYMENTS</span>
+            </div>
           </div>
-          <div className="stat-item">
-            <div className="stat-number">5+</div>
-            <div className="stat-label">Years Experience</div>
+          
+          <div className="tactical-card">
+            <div className="card-header">
+              <div className="status-indicator standby"></div>
+              <span className="card-designation">BRAVO</span>
+            </div>
+            <h3>YEARS EXPERIENCE</h3>
+            <div className="metric-display">
+              <span className="metric-number">04</span>
+              <span className="metric-unit">YEARS</span>
+            </div>
           </div>
-          <div className="stat-item">
-            <div className="stat-number">50+</div>
-            <div className="stat-label">Happy Clients</div>
+          
+          <div className="tactical-card">
+            <div className="card-header">
+              <div className="status-indicator ready"></div>
+              <span className="card-designation">CHARLIE</span>
+            </div>
+            <h3>TECHNOLOGIES MASTERED</h3>
+            <div className="metric-display">
+              <span className="metric-number">15+</span>
+              <span className="metric-unit">SYSTEMS</span>
+            </div>
           </div>
         </div>
       </div>
