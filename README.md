@@ -20,3 +20,6 @@ npm run build
 
 # Deploy to GitHub Pages
 npm run deploy
+
+# test
+npm run dev

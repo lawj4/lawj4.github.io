@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'SF Display';
     src: url('/fonts/SF-Pro-Display-Semibold.otf') format('opentype');
-    font-weight: 600; /* Semi-bold */
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -15,196 +15,354 @@
 @font-face {
     font-family: 'SF Display';
     src: url('/fonts/SF-Pro-Display-Regular.otf') format('opentype');
-    font-weight: normal; /* Regular */
+    font-weight: normal;
     font-style: normal;
 }
-
 
 @font-face {
     font-family: 'SF Display';
     src: url('/fonts/SF-Pro-Display-Thin.otf') format('opentype');
-    font-weight: 100; /* Thin */
+    font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'SF Display';
     src: url('/fonts/SF-Pro-Display-Light.otf') format('opentype');
-    font-weight: 200; /* Light */
+    font-weight: 200;
     font-style: normal;
 }
 
-  
-  
-
-  
-  .headline {
-    font-family: 'SF Display', Arial, sans-serif; /* SF Display with fallback */
-    font-weight: 600; /* Semi-bold weight */
-    font-style: normal;
-    font-size: 56px; /* Font size for the name */
-    margin-bottom: 0px; /* Bottom margin for spacing */
-    line-height: 60px; /* Adjust line height, instead of using height */
-    color: #1D1D1E; /* Dark text color */
-    z-index: 10;
-}
-.subhead {
-
-    font-family: 'SF Display', Arial, sans-serif; /* SF Display with fallback */
-    font-weight: normal;
-    font-style: normal;
-    letter-spacing: 0.2px;
-    font-size: 30px;
-    line-height: 32px; /* Corrected property */
-    color: #1D1D1E;
-    z-index: 10;
+/* Global Styles */
+* {
+  box-sizing: border-box;
 }
 
+.home-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 10;
+  max-width: 800px;
+  padding: 0 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+  font-family: 'SF Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: white;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #ffffff, #e0e0e0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-family: 'SF Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2.5rem;
+  line-height: 1.4;
+}
 
 .button-container {
-    display: flex;
-    justify-content: center; /* Center buttons horizontally */
-    gap: 20px; /* Space between buttons */
-    width: 100%; /* Ensure container takes up the full width */
-    margin-top: 20px; /* Optional margin for spacing */
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  font-family: 'SF Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+}
+
+.cta-button.primary {
+  background: linear-gradient(45deg, #007AFF, #0051D5);
+  color: white;
+  box-shadow: 0 8px 32px rgba(0, 122, 255, 0.3);
+}
+
+.cta-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 122, 255, 0.4);
+  background: linear-gradient(45deg, #0051D5, #007AFF);
+}
+
+.cta-button.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cta-button.secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.hero-tagline {
+  font-family: 'SF Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 4s ease-in-out infinite;
+}
+
+/* Floating Elements */
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  animation: float 6s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 200px;
+  height: 200px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.circle-3 {
+  width: 150px;
+  height: 150px;
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+/* Feature Section */
+.feature-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.feature-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'SF Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, #2c3e50, #3498db);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-description {
+  font-family: 'SF Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 4rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.feature-card h3 {
+  font-family: 'SF Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  font-family: 'SF Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Stats Section */
+.stats-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  text-align: center;
+  color: white;
+}
+
+.stat-number {
+  font-family: 'SF Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, #ffffff, #f0f0f0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+  font-family: 'SF Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 0 1rem;
   }
   
-
-  .blue-btn-home {
-    background-color: #007BFF;
-    color: #EBF3FD;
-    font-family: 'SF Display', Arial, sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    border: none;
-    letter-spacing: 0.7px;
-    border-radius: 25px;
-    letter-spacing: 0.7px;
-    padding: 12px 22px;
-    font-size: 17px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .blue-btn-home:hover {
-    background-color: #2077d4;
-  }
-  
-
-
-  .white-btn-home {
-    background-color: transparent;
-    color: #007BFF;
-    font-family: 'SF Display', Arial, sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    border-width: 1px;
-    border-color: #007BFF;
-    letter-spacing: 0.7px;
-    border-radius: 25px;
-    padding: 12px 22px;
-    font-size: 17px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .white-btn-home:hover {
-    color: #EBF3FD; 
-    background-color: #007BFF;
-  }
-
-  
-  
-
-
-
-
-
-
-
-  .block {
-    margin: 12px;
-    height: 700px;
-    width:100%;
-    background-color: black;
-  }
-
-
-  .home-container {
-    display: flex;
+  .button-container {
     flex-direction: column;
-    width: 100%;
     align-items: center;
-    text-align: center;
-    background-color: #f5f5f5;
-    min-height: 100vh;
   }
   
-/*FIRST BLOCK*/
-  .first-block {
-    width: 100%;
-    height: 750px; /* Fixed height */
-    background-color: black; /* Fallback color */
-    background-image: url('/images/color4final.jpeg'); /* Ensure correct path */
-    background-size: auto 100%; /* Maintain image height, expand width */
-    background-position: center; /* Keep it centered */
-    background-repeat: no-repeat; /* Prevent tiling */
-}
-.first-block:hover {
-    background-color: red;
-}
-.headline.first {
-    margin-top: 100px;
-}
-.subhead.first {
-    margin-top: 5px;
-    font-size: 28px;
-    line-height: 32px; /* Corrected property */
-    margin-bottom: 20px;
-}
-.subhead.rainbow {
-    background-image: linear-gradient(to right, red, orange, green, purple); /* Gradient from red to green to purple */
-    -webkit-background-clip: text; /* Apply the gradient to the text */
-    background-clip: text; /* Apply the gradient to the text */
-    color: transparent; /* Make the text color transparent to show the gradient */
-    font-size: 21px;
-    line-height: 25px; /* Corrected property */
-    margin-top: 395px;
+  .cta-button {
+    width: 200px;
   }
-
-/*SECOND BLOCK*/
-.second-block {
-    background-color: black;
-    height: 700px;
-    width: 100%;
-    background-image: url('/images/orange-metal-radial-final.jpg'); /* Ensure correct path */
-    background-size: auto 100%; /* Maintain image height, expand width */
-    background-position: center; /* Keep it centered */
-    background-repeat: no-repeat; /* Prevent tiling */
-}
-.headline.second {
-    margin-top: 55px;
-    color: white;
-}
-.subhead.second {
-    color: white;
-    margin-top: 5px;
-    font-size: 28px;
-    line-height: 32px; /* Corrected property */
-    margin-bottom: 20px;
-}  
-
-  .block.spacer {
-    margin-top: 550px;
-    z-index: 5;
+  
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-  .banner {
-    height: 100%;  
-    width: auto;  
-    object-fit: cover;  
-    display: block; /* Removes extra inline spacing */
-    max-width: none;  
-    margin: 0 auto;  /* Centers the image */
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .circle-1, .circle-2, .circle-3 {
+    display: none;
+  }
 }
-
-
