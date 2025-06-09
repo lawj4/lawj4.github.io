@@ -5,67 +5,68 @@ const Portfolio = () => {
   const projects = [
     {
       id: "PROJECT_001",
-      name: "ADVANCED WEB APPLICATION",
+      name: "ZOTSWIPE",
       status: "ACTIVE",
-      classification: "PUBLIC",
-      technologies: ["React", "TypeScript", "Node.js", "MongoDB"],
-      description: "Full-stack web application with real-time capabilities and advanced user authentication systems.",
-      githubUrl: "#", // Replace with your actual GitHub URL
-      liveUrl: "#", // Replace with live demo URL if available
+      classification: "CONFIDENTIAL",
+      technologies: ["SwiftUI", "Firebase", "Google Sign-In", "Apple Sign In", "Push Notifications", "Real-time Database", "Cloud Functions", "iOS"],
+      description: "Connects students to buy and sell unused meal swipes at campus dining halls, reducing waste.",
+      githubUrl: "", // Replace with actual URL
+      liveUrl: "https://apps.apple.com/us/app/zotswipe/id6746112081", // Replace with live demo URL if available
       completionLevel: 95
     },
     {
-      id: "PROJECT_002", 
-      name: "MACHINE LEARNING TOOLKIT",
+      id: "PROJECT_002",
+      name: "HEARTHSTONE BOT",
       status: "DEVELOPMENT",
       classification: "PUBLIC",
-      technologies: ["Python", "TensorFlow", "Jupyter", "NumPy"],
-      description: "Comprehensive machine learning framework for data analysis and predictive modeling applications.",
-      githubUrl: "#", // Replace with your actual GitHub URL
-      liveUrl: null,
-      completionLevel: 75
+      technologies: ["Python", "OpenCV", "NumPy", "Tesseract", "Computer Vision", "Machine Learning"],
+      description: "ML powered CV system to automatically analyze and extract real-time game board information",
+      githubUrl: "https://github.com/lawj4/hearthstone-bot", // Replace with actual URL
+      liveUrl: undefined,
+      completionLevel: 25
     },
     {
-      id: "PROJECT_003",
-      name: "MOBILE APPLICATION SUITE",
+      id: "PROJECT_003", 
+      name: "FABFLIX",
       status: "COMPLETED",
-      classification: "PUBLIC", 
-      technologies: ["React Native", "Firebase", "JavaScript", "API"],
-      description: "Cross-platform mobile application with cloud integration and real-time data synchronization.",
-      githubUrl: "#", // Replace with your actual GitHub URL
-      liveUrl: "#", // Replace with app store link
+      classification: "RESTRICTED",
+      technologies: ["Java", "Servlets", "AWS", "Kubernetes", "Docker"],
+      description: "Full stack website with movie database functionality.",
+      githubUrl: undefined, // No GitHub URL - button won't show
+      liveUrl: "https://youtu.be/NB2FqORuHns?si=OmQnidGfiD3MTnVu&t=93",
       completionLevel: 100
     },
     {
       id: "PROJECT_004",
-      name: "DATABASE OPTIMIZATION SYSTEM",
-      status: "PLANNING",
-      classification: "RESTRICTED",
-      technologies: ["PostgreSQL", "Redis", "Docker", "Kubernetes"],
-      description: "Enterprise-level database optimization and caching system for high-performance applications.",
-      githubUrl: "#", // Replace with your actual GitHub URL
-      liveUrl: null,
-      completionLevel: 25
+      name: "UCI SEARCH",
+      status: "COMPLETED",
+      classification: "PUBLIC", 
+      technologies: ["Python", "BeautifulSoup"],
+      description: "Search engine that scrapes UCI directories using tf-idf and creates an inverted index for fast ranked retrieval.",
+      githubUrl: undefined, // Empty string - button won't show
+      liveUrl: "#", // Replace with app store link
+      completionLevel: 100
     },
+    
     {
       id: "PROJECT_005",
-      name: "CYBERSECURITY FRAMEWORK",
+      name: "XXX",
       status: "ACTIVE",
       classification: "CONFIDENTIAL",
       technologies: ["Python", "Cryptography", "Network Security", "Penetration Testing"],
       description: "Comprehensive security framework for vulnerability assessment and network protection protocols.",
-      githubUrl: "#", // Replace with your actual GitHub URL
-      liveUrl: null,
+      githubUrl: undefined, // Private repo - no public access
+      liveUrl: undefined,
       completionLevel: 80
     },
     {
       id: "PROJECT_006",
-      name: "AI CHATBOT INTERFACE",
+      name: "XXX",
       status: "COMPLETED",
       classification: "PUBLIC",
       technologies: ["OpenAI API", "React", "Natural Language Processing", "Cloud"],
       description: "Intelligent conversational interface with advanced natural language processing capabilities.",
-      githubUrl: "#", // Replace with your actual GitHub URL
+      githubUrl: "https://github.com/lawj4/ai-chatbot", // Replace with actual URL
       liveUrl: "#", // Replace with live demo URL
       completionLevel: 100
     }
@@ -88,6 +89,11 @@ const Portfolio = () => {
       case 'CONFIDENTIAL': return '#e74c3c';
       default: return '#95a5a6';
     }
+  };
+
+  // Helper function to check if GitHub URL is valid
+  const hasValidGithubUrl = (url: string | undefined) => {
+    return url && url.trim() !== "" && url !== "#";
   };
 
   return (
@@ -184,16 +190,21 @@ const Portfolio = () => {
               </div>
               
               <div className="project-actions">
-                <a 
-                  href={project.githubUrl} 
-                  className="action-btn primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>VIEW SOURCE</span>
-                  <div className="btn-arrow">→</div>
-                </a>
-                {project.liveUrl && (
+                {/* Conditionally render VIEW SOURCE button only if valid GitHub URL exists */}
+                {hasValidGithubUrl(project.githubUrl) && (
+                  <a 
+                    href={project.githubUrl} 
+                    className="action-btn primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>VIEW SOURCE</span>
+                    <div className="btn-arrow">→</div>
+                  </a>
+                )}
+                
+                {/* Conditionally render LIVE DEMO button if URL exists */}
+                {project.liveUrl && project.liveUrl !== "#" && (
                   <a 
                     href={project.liveUrl} 
                     className="action-btn secondary"
@@ -225,7 +236,7 @@ const Portfolio = () => {
             </div>
             <p>Access complete source code archives and development history for all public operations.</p>
             <a 
-              href="https://github.com/yourusername" 
+              href="https://github.com/lawj4" 
               className="github-btn"
               target="_blank"
               rel="noopener noreferrer"

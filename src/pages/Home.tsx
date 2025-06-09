@@ -2,9 +2,22 @@ import React from 'react';
 import './Home.css';
 
 const Home = () => {
+
+  const FloatingCube = ({ className }: { className: string }) => (
+    <div className={`floating-cube-wrapper ${className}`}>
+      <div className="floating-cube">
+        <div className="floating-cube-face front"></div>
+        <div className="floating-cube-face back"></div>
+        <div className="floating-cube-face right"></div>
+        <div className="floating-cube-face left"></div>
+        <div className="floating-cube-face top"></div>
+        <div className="floating-cube-face bottom"></div>
+      </div>
+    </div>
+  );
+
   return (
     <div className="home-container">
-      
       <div className="hero-section">
         <div className="geometric-grid">
           <div className="grid-line horizontal"></div>
@@ -18,11 +31,6 @@ const Home = () => {
         </div>
         
         <div className="hero-content">
-          <div className="rank-insignia">
-            <div className="chevron"></div>
-            <div className="chevron"></div>
-            <div className="chevron"></div>
-          </div>
           
           <h1 className="name-title">JEFFERSON LAW</h1>
           <div className="title-divider"></div>
@@ -41,62 +49,16 @@ const Home = () => {
           </div>
         </div>
         
-        <div className="hexagon-pattern">
-          <div className="hexagon hex-1"></div>
-          <div className="hexagon hex-2"></div>
-          <div className="hexagon hex-3"></div>
-          <div className="hexagon hex-4"></div>
-          <div className="hexagon hex-5"></div>
+        <div className="cube-pattern">
+          <FloatingCube className="cube-1" />
+          <FloatingCube className="cube-2" />
+          <FloatingCube className="cube-3" />
+          <FloatingCube className="cube-4" />
+          <FloatingCube className="cube-5" />
         </div>
       </div>
 
-      <div className="mission-section">
-        <div className="section-header">
-          <div className="section-number">01</div>
-          <h2 className="section-title">MISSION STATEMENT</h2>
-          <div className="section-line"></div>
-        </div>
-        
-        <div className="mission-content">
-          <div className="mission-text">
-            <p>Developing innovative software solutions with precision, discipline, and unwavering commitment to excellence. Every line of code serves a strategic purpose in advancing technological capabilities.</p>
-          </div>
-          
-          <div className="capabilities-grid">
-            <div className="capability-item">
-              <div className="capability-icon">▲</div>
-              <h4>FRONTEND DEVELOPMENT</h4>
-              <div className="capability-bar">
-                <div className="capability-fill" style={{width: '90%'}}></div>
-              </div>
-            </div>
-            
-            <div className="capability-item">
-              <div className="capability-icon">■</div>
-              <h4>BACKEND SYSTEMS</h4>
-              <div className="capability-bar">
-                <div className="capability-fill" style={{width: '85%'}}></div>
-              </div>
-            </div>
-            
-            <div className="capability-item">
-              <div className="capability-icon">◆</div>
-              <h4>DATABASE DESIGN</h4>
-              <div className="capability-bar">
-                <div className="capability-fill" style={{width: '80%'}}></div>
-              </div>
-            </div>
-            
-            <div className="capability-item">
-              <div className="capability-icon">●</div>
-              <h4>SYSTEM ARCHITECTURE</h4>
-              <div className="capability-bar">
-                <div className="capability-fill" style={{width: '75%'}}></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
 
       <div className="tactical-section">
         <div className="section-header">
@@ -113,7 +75,7 @@ const Home = () => {
             </div>
             <h3>ACTIVE PROJECTS</h3>
             <div className="metric-display">
-              <span className="metric-number">12</span>
+              <span className="metric-number">4</span>
               <span className="metric-unit">DEPLOYMENTS</span>
             </div>
           </div>
@@ -125,7 +87,7 @@ const Home = () => {
             </div>
             <h3>YEARS EXPERIENCE</h3>
             <div className="metric-display">
-              <span className="metric-number">04</span>
+              <span className="metric-number">4</span>
               <span className="metric-unit">YEARS</span>
             </div>
           </div>
@@ -143,7 +105,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };
