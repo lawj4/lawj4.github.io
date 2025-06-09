@@ -53,23 +53,12 @@ const Portfolio = () => {
       name: "XXX",
       status: "ACTIVE",
       classification: "CONFIDENTIAL",
-      technologies: ["Python", "Cryptography", "Network Security", "Penetration Testing"],
-      description: "Comprehensive security framework for vulnerability assessment and network protection protocols.",
+      technologies: ["1","2","3","4"],
+      description: "Description.",
       githubUrl: undefined, // Private repo - no public access
       liveUrl: undefined,
-      completionLevel: 80
+      completionLevel: 50
     },
-    {
-      id: "PROJECT_006",
-      name: "XXX",
-      status: "COMPLETED",
-      classification: "PUBLIC",
-      technologies: ["OpenAI API", "React", "Natural Language Processing", "Cloud"],
-      description: "Intelligent conversational interface with advanced natural language processing capabilities.",
-      githubUrl: "https://github.com/lawj4/ai-chatbot", // Replace with actual URL
-      liveUrl: "#", // Replace with live demo URL
-      completionLevel: 100
-    }
   ];
 
   const getStatusColor = (status: string) => {
